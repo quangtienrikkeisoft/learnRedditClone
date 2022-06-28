@@ -1,11 +1,7 @@
-import { PhoneIcon, SearchIcon } from "@chakra-ui/icons";
+import { SearchIcon } from "@chakra-ui/icons";
 import {
-  Stack,
-  InputGroup,
-  InputLeftElement,
-  Input,
-  InputRightElement,
-  Flex,
+    Flex, Input, InputGroup,
+    InputLeftElement
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -37,6 +33,7 @@ const SearchInput: React.FC<SearchInputProps> = () => {
           }}
           height="34px"
           bg="gray.50"
+          mr={2}
         />
       </InputGroup>
     </Flex>

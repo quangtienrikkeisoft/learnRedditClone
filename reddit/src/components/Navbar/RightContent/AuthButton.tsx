@@ -10,7 +10,7 @@ const AuthButton: React.FC<AuthButtonProps> = () => {
   return (
     <>
       <Button
-        variant="solid"
+        variant="outline"
         height="28px"
         display={{ base: "none", sm: "flex" }}
         width={{ base: "70px", sm: "110px" }}
@@ -20,6 +20,7 @@ const AuthButton: React.FC<AuthButtonProps> = () => {
             view: "login",
           });
         }}
+        mr={2}
       >
         Log In
       </Button>
@@ -34,6 +35,7 @@ const AuthButton: React.FC<AuthButtonProps> = () => {
             view: "signup",
           });
         }}
+        mr={2}
       >
         Sign Up
       </Button>
