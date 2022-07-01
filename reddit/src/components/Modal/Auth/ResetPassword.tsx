@@ -27,13 +27,13 @@ const ResetPassword: React.FC<ResetPasswordProps> = ({ toggleView }) => {
     <Flex direction="column" alignItems="center" width="100%">
       <Icon as={BsReddit} color="brand.100" fontSize={40} mb={2} />
       <Text fontWeight={700} mb={2}>
-        Reset your Password
+        Reset your password
       </Text>
       {success ? (
-        <Text mr={4}>Check your email :|</Text>
+        <Text mb={4}>Check your email :)</Text>
       ) : (
         <>
-          <Text fontSize="sm" textAlign="center" mb="2">
+          <Text fontSize="sm" textAlign="center" mb={2}>
             Enter the email associated with your account and we will send you a
             reset link
           </Text>
@@ -46,9 +46,7 @@ const ResetPassword: React.FC<ResetPasswordProps> = ({ toggleView }) => {
               mb={2}
               onChange={(event) => setEmail(event.target.value)}
               fontSize="10pt"
-              _placeholder={{
-                color: "gray.500",
-              }}
+              _placeholder={{ color: "gray.500" }}
               _hover={{
                 bg: "white",
                 border: "1px solid",
@@ -86,19 +84,23 @@ const ResetPassword: React.FC<ResetPasswordProps> = ({ toggleView }) => {
         cursor="pointer"
       >
         <Text
-          onClick={(prev) => ({
-            ...prev,
-            view: "login",
-          })}
+          onClick={() =>
+            setAuthModalState((prev) => ({
+              ...prev,
+              view: "login",
+            }))
+          }
         >
           LOGIN
         </Text>
         <Icon as={BsDot} />
         <Text
-          onClick={(prev) => ({
-            ...prev,
-            view: "signup",
-          })}
+          onClick={() =>
+            setAuthModalState((prev) => ({
+              ...prev,
+              view: "signup",
+            }))
+          }
         >
           SIGN UP
         </Text>

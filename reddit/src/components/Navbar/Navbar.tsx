@@ -3,6 +3,7 @@ import { User } from "firebase/auth";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase/clientApp";
+import Directory from "./Directory/Index";
 import RightContent from "./RightContent/RightContent";
 import SearchInput from "./SearchInput";
 
@@ -18,7 +19,7 @@ const Navbar: React.FC = () => {
           display={{ base: "none", md: "unset" }}
         />
       </Flex>
-      {/* <Directory /> */}
+      {user && <Directory />}
       <SearchInput />
       <RightContent user={user as User} />
     </Flex>
