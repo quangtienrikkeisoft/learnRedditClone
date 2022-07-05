@@ -1,0 +1,303 @@
+[debug] [2022-07-05T15:23:04.944Z] ----------------------------------------------------------------------
+[debug] [2022-07-05T15:23:04.946Z] Command:       /home/blooddiamond/.nvm/versions/node/v16.14.2/bin/node /home/blooddiamond/.nvm/versions/node/v16.14.2/bin/firebase deploy
+[debug] [2022-07-05T15:23:04.947Z] CLI Version:   11.2.0
+[debug] [2022-07-05T15:23:04.947Z] Platform:      linux
+[debug] [2022-07-05T15:23:04.947Z] Node Version:  v16.14.2
+[debug] [2022-07-05T15:23:04.947Z] Time:          Tue Jul 05 2022 22:23:04 GMT+0700 (Indochina Time)
+[debug] [2022-07-05T15:23:04.948Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-07-05T15:23:05.015Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-07-05T15:23:05.016Z] > authorizing via signed-in user (whynotme1211@gmail.com)
+[debug] [2022-07-05T15:23:05.016Z] [iam] checking project testing-3f9a8 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2022-07-05T15:23:05.018Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/testing-3f9a8:testIamPermissions [none]
+[debug] [2022-07-05T15:23:05.018Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/testing-3f9a8:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2022-07-05T15:23:05.992Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/testing-3f9a8:testIamPermissions 200
+[debug] [2022-07-05T15:23:05.992Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/testing-3f9a8:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2022-07-05T15:23:05.994Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/testing-3f9a8/serviceAccounts/testing-3f9a8@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2022-07-05T15:23:05.994Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/testing-3f9a8/serviceAccounts/testing-3f9a8@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-07-05T15:23:06.338Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/testing-3f9a8/serviceAccounts/testing-3f9a8@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2022-07-05T15:23:06.339Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/testing-3f9a8/serviceAccounts/testing-3f9a8@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'testing-3f9a8'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[debug] [2022-07-05T15:23:30.058Z] ----------------------------------------------------------------------
+[debug] [2022-07-05T15:23:30.060Z] Command:       /home/blooddiamond/.nvm/versions/node/v16.14.2/bin/node /home/blooddiamond/.nvm/versions/node/v16.14.2/bin/firebase deploy --only functions
+[debug] [2022-07-05T15:23:30.061Z] CLI Version:   11.2.0
+[debug] [2022-07-05T15:23:30.061Z] Platform:      linux
+[debug] [2022-07-05T15:23:30.061Z] Node Version:  v16.14.2
+[debug] [2022-07-05T15:23:30.061Z] Time:          Tue Jul 05 2022 22:23:30 GMT+0700 (Indochina Time)
+[debug] [2022-07-05T15:23:30.062Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-07-05T15:23:30.124Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-07-05T15:23:30.124Z] > authorizing via signed-in user (whynotme1211@gmail.com)
+[debug] [2022-07-05T15:23:30.124Z] [iam] checking project testing-3f9a8 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2022-07-05T15:23:30.127Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/testing-3f9a8:testIamPermissions [none]
+[debug] [2022-07-05T15:23:30.127Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/testing-3f9a8:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2022-07-05T15:23:31.071Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/testing-3f9a8:testIamPermissions 200
+[debug] [2022-07-05T15:23:31.072Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/testing-3f9a8:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2022-07-05T15:23:31.072Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/testing-3f9a8/serviceAccounts/testing-3f9a8@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2022-07-05T15:23:31.073Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/testing-3f9a8/serviceAccounts/testing-3f9a8@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-07-05T15:23:31.405Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/testing-3f9a8/serviceAccounts/testing-3f9a8@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2022-07-05T15:23:31.406Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/testing-3f9a8/serviceAccounts/testing-3f9a8@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'testing-3f9a8'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] ✔  functions: Finished running predeploy script. 
+[debug] [2022-07-05T15:23:39.767Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testing-3f9a8 [none]
+[debug] [2022-07-05T15:23:40.084Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testing-3f9a8 200
+[debug] [2022-07-05T15:23:40.085Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testing-3f9a8 {"projectId":"testing-3f9a8","projectNumber":"239948751383","displayName":"testing ","name":"projects/testing-3f9a8","resources":{"hostingSite":"testing-3f9a8","realtimeDatabaseInstance":"testing-3f9a8-default-rtdb","storageBucket":"testing-3f9a8.appspot.com","locationId":"asia-northeast3"},"state":"ACTIVE"}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2022-07-05T15:23:40.090Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-07-05T15:23:40.095Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/runtimeconfig.googleapis.com [none]
+[debug] [2022-07-05T15:23:40.099Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/cloudbuild.googleapis.com [none]
+[debug] [2022-07-05T15:23:40.102Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/artifactregistry.googleapis.com [none]
+[debug] [2022-07-05T15:23:41.398Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/runtimeconfig.googleapis.com 200
+[debug] [2022-07-05T15:23:41.399Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2022-07-05T15:23:41.409Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/cloudfunctions.googleapis.com 200
+[debug] [2022-07-05T15:23:41.410Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2022-07-05T15:23:41.420Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/cloudbuild.googleapis.com 200
+[debug] [2022-07-05T15:23:41.421Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/cloudbuild.googleapis.com [omitted]
+[warn] ⚠  functions: missing required API cloudbuild.googleapis.com. Enabling now... 
+[debug] [2022-07-05T15:23:41.423Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/cloudbuild.googleapis.com:enable [none]
+[debug] [2022-07-05T15:23:41.725Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/artifactregistry.googleapis.com 200
+[debug] [2022-07-05T15:23:41.726Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/artifactregistry.googleapis.com [omitted]
+[debug] [2022-07-05T15:23:42.773Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/cloudbuild.googleapis.com:enable 200
+[debug] [2022-07-05T15:23:42.773Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/cloudbuild.googleapis.com:enable [omitted]
+[debug] [2022-07-05T15:23:52.781Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/cloudbuild.googleapis.com [none]
+[debug] [2022-07-05T15:23:54.027Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/cloudbuild.googleapis.com 200
+[debug] [2022-07-05T15:23:54.028Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2022-07-05T15:23:54.034Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testing-3f9a8/adminSdkConfig [none]
+[debug] [2022-07-05T15:23:54.385Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testing-3f9a8/adminSdkConfig 200
+[debug] [2022-07-05T15:23:54.386Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testing-3f9a8/adminSdkConfig {"projectId":"testing-3f9a8","databaseURL":"https://testing-3f9a8-default-rtdb.asia-southeast1.firebasedatabase.app","storageBucket":"testing-3f9a8.appspot.com","locationId":"asia-northeast3"}
+[debug] [2022-07-05T15:23:54.388Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/testing-3f9a8/configs [none]
+[debug] [2022-07-05T15:23:54.782Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/testing-3f9a8/configs 200
+[debug] [2022-07-05T15:23:54.783Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/testing-3f9a8/configs {}
+[info] i  functions: preparing codebase default for deployment 
+[debug] [2022-07-05T15:23:54.791Z] Validating nodejs source
+[debug] [2022-07-05T15:23:56.859Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.2.0",
+    "firebase-functions": "^3.21.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  },
+  "private": true
+}
+[debug] [2022-07-05T15:23:56.859Z] Building nodejs source
+[debug] [2022-07-05T15:23:56.861Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-07-05T15:23:57.006Z] Serving at port 9005
+
+[debug] [2022-07-05T15:23:57.081Z] Got response from /__/functions.yaml {"endpoints":{"createUserDocument":{"platform":"gcfv1","eventTrigger":{"eventType":"providers/firebase.auth/eventTypes/user.create","eventFilters":{"resource":"projects/testing-3f9a8"},"retry":false},"labels":{},"entryPoint":"createUserDocument"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-07-05T15:23:57.091Z] shutdown requested via /__/quitquitquit
+
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged /home/blooddiamond/Desktop/reddit-clone-learning/reddit/functions (54.46 KB) for uploading 
+[debug] [2022-07-05T15:23:57.169Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/testing-3f9a8/locations/-/functions [none]
+[debug] [2022-07-05T15:23:57.856Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/testing-3f9a8/locations/-/functions 200
+[debug] [2022-07-05T15:23:57.856Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/testing-3f9a8/locations/-/functions {}
+[debug] [2022-07-05T15:23:57.857Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2alpha/projects/testing-3f9a8/locations/-/functions [none]
+[debug] [2022-07-05T15:23:59.287Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2alpha/projects/testing-3f9a8/locations/-/functions 200
+[debug] [2022-07-05T15:23:59.287Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2alpha/projects/testing-3f9a8/locations/-/functions {}
+[debug] [2022-07-05T15:23:59.300Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testing-3f9a8 [none]
+[debug] [2022-07-05T15:23:59.628Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testing-3f9a8 200
+[debug] [2022-07-05T15:23:59.629Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testing-3f9a8 {"projectId":"testing-3f9a8","projectNumber":"239948751383","displayName":"testing ","name":"projects/testing-3f9a8","resources":{"hostingSite":"testing-3f9a8","realtimeDatabaseInstance":"testing-3f9a8-default-rtdb","storageBucket":"testing-3f9a8.appspot.com","locationId":"asia-northeast3"},"state":"ACTIVE"}
+[debug] [2022-07-05T15:23:59.637Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/testing-3f9a8/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2022-07-05T15:23:59.638Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/testing-3f9a8/locations/us-central1/functions:generateUploadUrl {}
+[debug] [2022-07-05T15:24:09.821Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/testing-3f9a8/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2022-07-05T15:24:09.821Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/testing-3f9a8/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/uploads-979659759653.us-central1.cloudfunctions.appspot.com/5d3e82e4-60f9-4a77-844d-7328859a3aad.zip?GoogleAccessId=service-239948751383@gcf-admin-robot.iam.gserviceaccount.com&Expires=1657036450&Signature=wXuREhtjEqH3M38Vhq4iRzFXInd3m1%2F%2BVCt2yZrokgpAyGnI61LfczIQCYL2QWGo52fHlHHYl30hpppF2veShcG%2B2NqQNr2%2Fgx9a1YrdCzYVPl1mU%2FO%2BRZUHbqNzPuyy9fUmD3ZAZgBbouqXNv5QC3NAfh6svgm36TAPz1QXeO5enIjZP%2BsPwJy2E4QoqWEAXsR%2Fb5ZKUCJZl1OaIaOXIxPM01fX9DnKm644vnNQseGNHkcJwsc%2BWtfi5ILs%2BXTZhUc6hSgp8MWqA3mlLpH9thXmIH3hmd3SCIP1CUbeVbu8gih7KdbXdLEG2hrzLqtehEf%2BGsfvbZz71deKdnUhwg%3D%3D"}
+[debug] [2022-07-05T15:24:09.826Z] >>> [apiv2][query] PUT https://storage.googleapis.com/uploads-979659759653.us-central1.cloudfunctions.appspot.com/5d3e82e4-60f9-4a77-844d-7328859a3aad.zip GoogleAccessId=service-239948751383%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1657036450&Signature=wXuREhtjEqH3M38Vhq4iRzFXInd3m1%2F%2BVCt2yZrokgpAyGnI61LfczIQCYL2QWGo52fHlHHYl30hpppF2veShcG%2B2NqQNr2%2Fgx9a1YrdCzYVPl1mU%2FO%2BRZUHbqNzPuyy9fUmD3ZAZgBbouqXNv5QC3NAfh6svgm36TAPz1QXeO5enIjZP%2BsPwJy2E4QoqWEAXsR%2Fb5ZKUCJZl1OaIaOXIxPM01fX9DnKm644vnNQseGNHkcJwsc%2BWtfi5ILs%2BXTZhUc6hSgp8MWqA3mlLpH9thXmIH3hmd3SCIP1CUbeVbu8gih7KdbXdLEG2hrzLqtehEf%2BGsfvbZz71deKdnUhwg%3D%3D
+[debug] [2022-07-05T15:24:09.827Z] >>> [apiv2][body] PUT https://storage.googleapis.com/uploads-979659759653.us-central1.cloudfunctions.appspot.com/5d3e82e4-60f9-4a77-844d-7328859a3aad.zip [stream]
+[debug] [2022-07-05T15:24:10.345Z] <<< [apiv2][status] PUT https://storage.googleapis.com/uploads-979659759653.us-central1.cloudfunctions.appspot.com/5d3e82e4-60f9-4a77-844d-7328859a3aad.zip 200
+[debug] [2022-07-05T15:24:10.346Z] <<< [apiv2][body] PUT https://storage.googleapis.com/uploads-979659759653.us-central1.cloudfunctions.appspot.com/5d3e82e4-60f9-4a77-844d-7328859a3aad.zip [omitted]
+[info] ✔  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 16 function createUserDocument(us-central1)... 
+[debug] [2022-07-05T15:24:10.363Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/testing-3f9a8/locations/us-central1/functions [none]
+[debug] [2022-07-05T15:24:10.363Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/testing-3f9a8/locations/us-central1/functions {"name":"projects/testing-3f9a8/locations/us-central1/functions/createUserDocument","sourceUploadUrl":"https://storage.googleapis.com/uploads-979659759653.us-central1.cloudfunctions.appspot.com/5d3e82e4-60f9-4a77-844d-7328859a3aad.zip?GoogleAccessId=service-239948751383@gcf-admin-robot.iam.gserviceaccount.com&Expires=1657036450&Signature=wXuREhtjEqH3M38Vhq4iRzFXInd3m1%2F%2BVCt2yZrokgpAyGnI61LfczIQCYL2QWGo52fHlHHYl30hpppF2veShcG%2B2NqQNr2%2Fgx9a1YrdCzYVPl1mU%2FO%2BRZUHbqNzPuyy9fUmD3ZAZgBbouqXNv5QC3NAfh6svgm36TAPz1QXeO5enIjZP%2BsPwJy2E4QoqWEAXsR%2Fb5ZKUCJZl1OaIaOXIxPM01fX9DnKm644vnNQseGNHkcJwsc%2BWtfi5ILs%2BXTZhUc6hSgp8MWqA3mlLpH9thXmIH3hmd3SCIP1CUbeVbu8gih7KdbXdLEG2hrzLqtehEf%2BGsfvbZz71deKdnUhwg%3D%3D","entryPoint":"createUserDocument","runtime":"nodejs16","dockerRegistry":"ARTIFACT_REGISTRY","labels":{"deployment-tool":"cli-firebase"},"eventTrigger":{"eventType":"providers/firebase.auth/eventTypes/user.create","resource":"projects/testing-3f9a8"},"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"testing-3f9a8\",\"databaseURL\":\"https://testing-3f9a8-default-rtdb.asia-southeast1.firebasedatabase.app\",\"storageBucket\":\"testing-3f9a8.appspot.com\",\"locationId\":\"asia-northeast3\"}","GCLOUD_PROJECT":"testing-3f9a8"},"timeout":"60s"}
+[debug] [2022-07-05T15:24:10.850Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/testing-3f9a8/locations/us-central1/functions 403
+[debug] [2022-07-05T15:24:10.851Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/testing-3f9a8/locations/us-central1/functions {"error":{"code":403,"message":"Cloud Functions uses Artifact Registry to store function docker images. Artifact Registry API is not enabled in your project. To enable the API, visit https://console.developers.google.com/apis/api/artifactregistry.googleapis.com/overview?project=239948751383 or use the gcloud command 'gcloud services enable artifactregistry.googleapis.com' then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":"PERMISSION_DENIED"}}
+[warn] ⚠  functions: failed to create function projects/testing-3f9a8/locations/us-central1/functions/createUserDocument 
+[error] Failed to create function projects/testing-3f9a8/locations/us-central1/functions/createUserDocument
+[debug] [2022-07-05T15:24:10.871Z] Total Function Deployment time: 501
+[debug] [2022-07-05T15:24:10.871Z] 1 Functions Deployed
+[debug] [2022-07-05T15:24:10.871Z] 1 Functions Errored
+[debug] [2022-07-05T15:24:10.871Z] 0 Function Deployments Aborted
+[debug] [2022-07-05T15:24:10.871Z] Average Function Deployment time: 498
+[info] 
+[info] Functions deploy had errors with the following functions:
+	createUserDocument(us-central1)
+[info] i  functions: cleaning up build files... 
+[debug] [2022-07-05T15:24:10.982Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/testing-3f9a8/locations/us-central1/repositories/gcf-artifacts/packages/create_user_document [none]
+[debug] [2022-07-05T15:24:10.983Z] >>> [apiv2][query] GET https://us.gcr.io/v2/testing-3f9a8/gcf/us-central1/tags/list [none]
+[debug] [2022-07-05T15:24:12.091Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/testing-3f9a8/locations/us-central1/repositories/gcf-artifacts/packages/create_user_document 403
+[debug] [2022-07-05T15:24:12.092Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/testing-3f9a8/locations/us-central1/repositories/gcf-artifacts/packages/create_user_document {"error":{"code":403,"message":"Artifact Registry API has not been used in project 239948751383 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/artifactregistry.googleapis.com/overview?project=239948751383 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/artifactregistry.googleapis.com/overview?project=239948751383"}]},{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"service":"artifactregistry.googleapis.com","consumer":"projects/239948751383"}}]}}
+[debug] [2022-07-05T15:24:13.195Z] <<< [apiv2][status] GET https://us.gcr.io/v2/testing-3f9a8/gcf/us-central1/tags/list 200
+[debug] [2022-07-05T15:24:13.196Z] <<< [apiv2][body] GET https://us.gcr.io/v2/testing-3f9a8/gcf/us-central1/tags/list {"child":[],"manifest":{},"name":"testing-3f9a8/gcf/us-central1","tags":[]}
+[debug] [2022-07-05T15:24:13.197Z] Could not find image for function projects/testing-3f9a8/locations/us-central1/functions/createUserDocument
+[warn] ⚠  functions: Unhandled error cleaning up build images. This could result in a small monthly bill if not corrected. You can attempt to delete these images by redeploying or you can delete them manually at https://console.cloud.google.com/artifacts/docker/testing-3f9a8/us-central1/gcf-artifacts 
+[debug] [2022-07-05T15:24:13.315Z] Error: Failed to create function createUserDocument in region us-central1
+    at /home/blooddiamond/.nvm/versions/node/v16.14.2/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:41:11
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Fabricator.createV1Function (/home/blooddiamond/.nvm/versions/node/v16.14.2/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:167:32)
+    at async Fabricator.createEndpoint (/home/blooddiamond/.nvm/versions/node/v16.14.2/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:118:13)
+    at async handle (/home/blooddiamond/.nvm/versions/node/v16.14.2/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:77:17)
+[error] 
+[error] Error: There was an error deploying functions
+[debug] [2022-07-05T15:26:56.433Z] ----------------------------------------------------------------------
+[debug] [2022-07-05T15:26:56.435Z] Command:       /home/blooddiamond/.nvm/versions/node/v16.14.2/bin/node /home/blooddiamond/.nvm/versions/node/v16.14.2/bin/firebase deploy --only functions
+[debug] [2022-07-05T15:26:56.436Z] CLI Version:   11.2.0
+[debug] [2022-07-05T15:26:56.436Z] Platform:      linux
+[debug] [2022-07-05T15:26:56.436Z] Node Version:  v16.14.2
+[debug] [2022-07-05T15:26:56.437Z] Time:          Tue Jul 05 2022 22:26:56 GMT+0700 (Indochina Time)
+[debug] [2022-07-05T15:26:56.437Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-07-05T15:26:56.521Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-07-05T15:26:56.521Z] > authorizing via signed-in user (whynotme1211@gmail.com)
+[debug] [2022-07-05T15:26:56.521Z] [iam] checking project testing-3f9a8 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2022-07-05T15:26:56.524Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/testing-3f9a8:testIamPermissions [none]
+[debug] [2022-07-05T15:26:56.524Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/testing-3f9a8:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2022-07-05T15:26:57.495Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/testing-3f9a8:testIamPermissions 200
+[debug] [2022-07-05T15:26:57.495Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/testing-3f9a8:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2022-07-05T15:26:57.497Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/testing-3f9a8/serviceAccounts/testing-3f9a8@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2022-07-05T15:26:57.497Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/testing-3f9a8/serviceAccounts/testing-3f9a8@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-07-05T15:26:57.875Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/testing-3f9a8/serviceAccounts/testing-3f9a8@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2022-07-05T15:26:57.876Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/testing-3f9a8/serviceAccounts/testing-3f9a8@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'testing-3f9a8'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] ✔  functions: Finished running predeploy script. 
+[debug] [2022-07-05T15:27:10.318Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testing-3f9a8 [none]
+[debug] [2022-07-05T15:27:10.733Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testing-3f9a8 200
+[debug] [2022-07-05T15:27:10.733Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testing-3f9a8 {"projectId":"testing-3f9a8","projectNumber":"239948751383","displayName":"testing ","name":"projects/testing-3f9a8","resources":{"hostingSite":"testing-3f9a8","realtimeDatabaseInstance":"testing-3f9a8-default-rtdb","storageBucket":"testing-3f9a8.appspot.com","locationId":"asia-northeast3"},"state":"ACTIVE"}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2022-07-05T15:27:10.736Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-07-05T15:27:10.745Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/runtimeconfig.googleapis.com [none]
+[debug] [2022-07-05T15:27:10.755Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/cloudbuild.googleapis.com [none]
+[debug] [2022-07-05T15:27:10.759Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/artifactregistry.googleapis.com [none]
+[debug] [2022-07-05T15:27:12.026Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/artifactregistry.googleapis.com 200
+[debug] [2022-07-05T15:27:12.026Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/artifactregistry.googleapis.com [omitted]
+[debug] [2022-07-05T15:27:12.056Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/runtimeconfig.googleapis.com 200
+[debug] [2022-07-05T15:27:12.056Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2022-07-05T15:27:12.063Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/cloudbuild.googleapis.com 200
+[debug] [2022-07-05T15:27:12.064Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2022-07-05T15:27:12.082Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/cloudfunctions.googleapis.com 200
+[debug] [2022-07-05T15:27:12.082Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/testing-3f9a8/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2022-07-05T15:27:12.086Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testing-3f9a8/adminSdkConfig [none]
+[debug] [2022-07-05T15:27:12.443Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testing-3f9a8/adminSdkConfig 200
+[debug] [2022-07-05T15:27:12.444Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testing-3f9a8/adminSdkConfig {"projectId":"testing-3f9a8","databaseURL":"https://testing-3f9a8-default-rtdb.asia-southeast1.firebasedatabase.app","storageBucket":"testing-3f9a8.appspot.com","locationId":"asia-northeast3"}
+[debug] [2022-07-05T15:27:12.445Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/testing-3f9a8/configs [none]
+[debug] [2022-07-05T15:27:12.792Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/testing-3f9a8/configs 200
+[debug] [2022-07-05T15:27:12.792Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/testing-3f9a8/configs {}
+[info] i  functions: preparing codebase default for deployment 
+[debug] [2022-07-05T15:27:12.795Z] Validating nodejs source
+[debug] [2022-07-05T15:27:14.316Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^10.2.0",
+    "firebase-functions": "^3.21.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  },
+  "private": true
+}
+[debug] [2022-07-05T15:27:14.317Z] Building nodejs source
+[debug] [2022-07-05T15:27:14.319Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-07-05T15:27:14.525Z] Serving at port 9005
+
+[debug] [2022-07-05T15:27:14.643Z] Got response from /__/functions.yaml {"endpoints":{"createUserDocument":{"platform":"gcfv1","eventTrigger":{"eventType":"providers/firebase.auth/eventTypes/user.create","eventFilters":{"resource":"projects/testing-3f9a8"},"retry":false},"labels":{},"entryPoint":"createUserDocument"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-07-05T15:27:14.660Z] shutdown requested via /__/quitquitquit
+
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged /home/blooddiamond/Desktop/reddit-clone-learning/reddit/functions (54.46 KB) for uploading 
+[debug] [2022-07-05T15:27:14.749Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/testing-3f9a8/locations/-/functions [none]
+[debug] [2022-07-05T15:27:15.537Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/testing-3f9a8/locations/-/functions 200
+[debug] [2022-07-05T15:27:15.537Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/testing-3f9a8/locations/-/functions {}
+[debug] [2022-07-05T15:27:15.539Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2alpha/projects/testing-3f9a8/locations/-/functions [none]
+[debug] [2022-07-05T15:27:16.993Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2alpha/projects/testing-3f9a8/locations/-/functions 200
+[debug] [2022-07-05T15:27:16.993Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2alpha/projects/testing-3f9a8/locations/-/functions {}
+[debug] [2022-07-05T15:27:17.036Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/testing-3f9a8 [none]
+[debug] [2022-07-05T15:27:17.352Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/testing-3f9a8 200
+[debug] [2022-07-05T15:27:17.352Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/testing-3f9a8 {"projectId":"testing-3f9a8","projectNumber":"239948751383","displayName":"testing ","name":"projects/testing-3f9a8","resources":{"hostingSite":"testing-3f9a8","realtimeDatabaseInstance":"testing-3f9a8-default-rtdb","storageBucket":"testing-3f9a8.appspot.com","locationId":"asia-northeast3"},"state":"ACTIVE"}
+[debug] [2022-07-05T15:27:17.356Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/testing-3f9a8/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2022-07-05T15:27:17.356Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/testing-3f9a8/locations/us-central1/functions:generateUploadUrl {}
+[debug] [2022-07-05T15:27:18.168Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/testing-3f9a8/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2022-07-05T15:27:18.168Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/testing-3f9a8/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/uploads-979659759653.us-central1.cloudfunctions.appspot.com/223f1e51-fe13-4b6a-9a07-b83e72a1dd57.zip?GoogleAccessId=service-239948751383@gcf-admin-robot.iam.gserviceaccount.com&Expires=1657036638&Signature=l1lVTiaTxdXv%2Bs4dwi1oNLKv6wAJs65IR4l%2BLhOsVUod40jcWQRMoDSDHYFz81%2Ba%2FbMhVteXY4sssrOY5FvFWy%2Bi8Ab5nH1R0UV74fiIBGcHZBYsa%2F4SyaALRO76WZHAaynh42OUIEy%2BCi2yi9eatKflprNoRIJrGOgYqM8nEKgpwZccWVXht2gMpPbzJY2lBiRlVd9Wteww3HN6fggKBodNs%2FqrJkEKpeKC1Phk3CNKfNi7jhvg5dQmV8i2zJ4qgk2oBkmz5li3YHVo04s5jgUaNcZA3%2FX8%2BUd4bsA6SMyvQvV0hxG1%2FciF7WUI%2F7URbUbEWtFxpCHgCv0Mvp71pA%3D%3D"}
+[debug] [2022-07-05T15:27:18.171Z] >>> [apiv2][query] PUT https://storage.googleapis.com/uploads-979659759653.us-central1.cloudfunctions.appspot.com/223f1e51-fe13-4b6a-9a07-b83e72a1dd57.zip GoogleAccessId=service-239948751383%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1657036638&Signature=l1lVTiaTxdXv%2Bs4dwi1oNLKv6wAJs65IR4l%2BLhOsVUod40jcWQRMoDSDHYFz81%2Ba%2FbMhVteXY4sssrOY5FvFWy%2Bi8Ab5nH1R0UV74fiIBGcHZBYsa%2F4SyaALRO76WZHAaynh42OUIEy%2BCi2yi9eatKflprNoRIJrGOgYqM8nEKgpwZccWVXht2gMpPbzJY2lBiRlVd9Wteww3HN6fggKBodNs%2FqrJkEKpeKC1Phk3CNKfNi7jhvg5dQmV8i2zJ4qgk2oBkmz5li3YHVo04s5jgUaNcZA3%2FX8%2BUd4bsA6SMyvQvV0hxG1%2FciF7WUI%2F7URbUbEWtFxpCHgCv0Mvp71pA%3D%3D
+[debug] [2022-07-05T15:27:18.171Z] >>> [apiv2][body] PUT https://storage.googleapis.com/uploads-979659759653.us-central1.cloudfunctions.appspot.com/223f1e51-fe13-4b6a-9a07-b83e72a1dd57.zip [stream]
+[debug] [2022-07-05T15:27:18.605Z] <<< [apiv2][status] PUT https://storage.googleapis.com/uploads-979659759653.us-central1.cloudfunctions.appspot.com/223f1e51-fe13-4b6a-9a07-b83e72a1dd57.zip 200
+[debug] [2022-07-05T15:27:18.605Z] <<< [apiv2][body] PUT https://storage.googleapis.com/uploads-979659759653.us-central1.cloudfunctions.appspot.com/223f1e51-fe13-4b6a-9a07-b83e72a1dd57.zip [omitted]
+[info] ✔  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 16 function createUserDocument(us-central1)... 
+[debug] [2022-07-05T15:27:18.613Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/testing-3f9a8/locations/us-central1/functions [none]
+[debug] [2022-07-05T15:27:18.613Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/testing-3f9a8/locations/us-central1/functions {"name":"projects/testing-3f9a8/locations/us-central1/functions/createUserDocument","sourceUploadUrl":"https://storage.googleapis.com/uploads-979659759653.us-central1.cloudfunctions.appspot.com/223f1e51-fe13-4b6a-9a07-b83e72a1dd57.zip?GoogleAccessId=service-239948751383@gcf-admin-robot.iam.gserviceaccount.com&Expires=1657036638&Signature=l1lVTiaTxdXv%2Bs4dwi1oNLKv6wAJs65IR4l%2BLhOsVUod40jcWQRMoDSDHYFz81%2Ba%2FbMhVteXY4sssrOY5FvFWy%2Bi8Ab5nH1R0UV74fiIBGcHZBYsa%2F4SyaALRO76WZHAaynh42OUIEy%2BCi2yi9eatKflprNoRIJrGOgYqM8nEKgpwZccWVXht2gMpPbzJY2lBiRlVd9Wteww3HN6fggKBodNs%2FqrJkEKpeKC1Phk3CNKfNi7jhvg5dQmV8i2zJ4qgk2oBkmz5li3YHVo04s5jgUaNcZA3%2FX8%2BUd4bsA6SMyvQvV0hxG1%2FciF7WUI%2F7URbUbEWtFxpCHgCv0Mvp71pA%3D%3D","entryPoint":"createUserDocument","runtime":"nodejs16","dockerRegistry":"ARTIFACT_REGISTRY","labels":{"deployment-tool":"cli-firebase"},"eventTrigger":{"eventType":"providers/firebase.auth/eventTypes/user.create","resource":"projects/testing-3f9a8"},"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"testing-3f9a8\",\"databaseURL\":\"https://testing-3f9a8-default-rtdb.asia-southeast1.firebasedatabase.app\",\"storageBucket\":\"testing-3f9a8.appspot.com\",\"locationId\":\"asia-northeast3\"}","GCLOUD_PROJECT":"testing-3f9a8"},"timeout":"60s"}
+[debug] [2022-07-05T15:27:19.303Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/testing-3f9a8/locations/us-central1/functions 403
+[debug] [2022-07-05T15:27:19.303Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/testing-3f9a8/locations/us-central1/functions {"error":{"code":403,"message":"Cloud Functions uses Artifact Registry to store function docker images. Artifact Registry API is not enabled in your project. To enable the API, visit https://console.developers.google.com/apis/api/artifactregistry.googleapis.com/overview?project=239948751383 or use the gcloud command 'gcloud services enable artifactregistry.googleapis.com' then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":"PERMISSION_DENIED"}}
+[warn] ⚠  functions: failed to create function projects/testing-3f9a8/locations/us-central1/functions/createUserDocument 
+[error] Failed to create function projects/testing-3f9a8/locations/us-central1/functions/createUserDocument
+[debug] [2022-07-05T15:27:19.333Z] Total Function Deployment time: 702
+[debug] [2022-07-05T15:27:19.334Z] 1 Functions Deployed
+[debug] [2022-07-05T15:27:19.334Z] 1 Functions Errored
+[debug] [2022-07-05T15:27:19.334Z] 0 Function Deployments Aborted
+[debug] [2022-07-05T15:27:19.335Z] Average Function Deployment time: 700
+[info] 
+[info] Functions deploy had errors with the following functions:
+	createUserDocument(us-central1)
+[info] i  functions: cleaning up build files... 
+[debug] [2022-07-05T15:27:19.452Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/testing-3f9a8/locations/us-central1/repositories/gcf-artifacts/packages/create_user_document [none]
+[debug] [2022-07-05T15:27:19.453Z] >>> [apiv2][query] GET https://us.gcr.io/v2/testing-3f9a8/gcf/us-central1/tags/list [none]
+[debug] [2022-07-05T15:27:19.702Z] <<< [apiv2][status] GET https://us.gcr.io/v2/testing-3f9a8/gcf/us-central1/tags/list 200
+[debug] [2022-07-05T15:27:19.702Z] <<< [apiv2][body] GET https://us.gcr.io/v2/testing-3f9a8/gcf/us-central1/tags/list {"child":[],"manifest":{},"name":"testing-3f9a8/gcf/us-central1","tags":[]}
+[debug] [2022-07-05T15:27:19.702Z] Could not find image for function projects/testing-3f9a8/locations/us-central1/functions/createUserDocument
+[debug] [2022-07-05T15:27:20.522Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/testing-3f9a8/locations/us-central1/repositories/gcf-artifacts/packages/create_user_document 403
+[debug] [2022-07-05T15:27:20.523Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/testing-3f9a8/locations/us-central1/repositories/gcf-artifacts/packages/create_user_document {"error":{"code":403,"message":"Artifact Registry API has not been used in project 239948751383 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/artifactregistry.googleapis.com/overview?project=239948751383 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/artifactregistry.googleapis.com/overview?project=239948751383"}]},{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"consumer":"projects/239948751383","service":"artifactregistry.googleapis.com"}}]}}
+[warn] ⚠  functions: Unhandled error cleaning up build images. This could result in a small monthly bill if not corrected. You can attempt to delete these images by redeploying or you can delete them manually at https://console.cloud.google.com/artifacts/docker/testing-3f9a8/us-central1/gcf-artifacts 
+[debug] [2022-07-05T15:27:20.646Z] Error: Failed to create function createUserDocument in region us-central1
+    at /home/blooddiamond/.nvm/versions/node/v16.14.2/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:41:11
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Fabricator.createV1Function (/home/blooddiamond/.nvm/versions/node/v16.14.2/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:167:32)
+    at async Fabricator.createEndpoint (/home/blooddiamond/.nvm/versions/node/v16.14.2/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:118:13)
+    at async handle (/home/blooddiamond/.nvm/versions/node/v16.14.2/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:77:17)
+[error] 
+[error] Error: There was an error deploying functions

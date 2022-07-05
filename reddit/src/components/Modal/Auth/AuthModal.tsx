@@ -20,12 +20,6 @@ import ResetPassword from "./ResetPassword";
 const AuthModal: React.FC = () => {
   const [modalState, setModalState] = useRecoilState(authModalState);
   const [user, loading, error] = useAuthState(auth);
-  const handleClose = () => {
-    setModalState((prev) => ({
-      ...prev,
-      open: false,
-    }));
-  };
   const toggleView = (view: string) => {
     setModalState({
       ...modalState,
@@ -36,6 +30,12 @@ const AuthModal: React.FC = () => {
     if (user) handleClose();
     console.log(user);
   }, [user]);
+  const handleClose = () => {
+    setModalState((prev) => ({
+      ...prev,
+      open: false,
+    }));
+  };
   return (
     <>
       <Modal isOpen={modalState.open} onClose={handleClose}>

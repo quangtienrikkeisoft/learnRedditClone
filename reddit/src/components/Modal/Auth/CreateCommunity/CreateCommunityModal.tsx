@@ -70,6 +70,7 @@ const CreateCommunityModal: React.FC<indexProps> = ({
       // checking exist comunity
       if (communityDoc.exists()) {
         setNameError(`Sorry, r/${name} is taken. Try another.`);
+        setLoading(false);
         return;
       }
       // create community
@@ -87,7 +88,7 @@ const CreateCommunityModal: React.FC<indexProps> = ({
   };
   return (
     <>
-      <Modal isOpen={isOpen} onClose={handleClose}>
+      <Modal isOpen={isOpen} onClose={handleClose} size="lg">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader
@@ -133,11 +134,20 @@ const CreateCommunityModal: React.FC<indexProps> = ({
                 {charsRemaining} Characters remaining
               </Text>
               <Box mt={4} mb={4}>
+                <Text fontSize="9pt" color="red">
+                  {nameError}
+                </Text>
                 <Text fontWeight={600} fontSize={15}>
                   Community Type
                 </Text>
+
                 <Stack spacing={2} pt={1}>
-                  <Checkbox colorScheme="blue" name="public">
+                  <Checkbox
+                    colorScheme="blue"
+                    name="public"
+                    isChecked={communityType === "public"}
+                    onChange={onCommunityTypeChange}
+                  >
                     <Flex alignItems="center">
                       <Icon as={BsFillPersonFill} mr={2} color="gray.500" />
                       <Text fontSize="10pt" mr={1}>
@@ -151,8 +161,8 @@ const CreateCommunityModal: React.FC<indexProps> = ({
                   <Checkbox
                     colorScheme="blue"
                     name="restricted"
-                    // isChecked=""
-                    // onChange=""
+                    isChecked={communityType === "restricted"}
+                    onChange={onCommunityTypeChange}
                   >
                     <Flex alignItems="center">
                       <Icon as={BsFillEyeFill} color="gray.500" mr={2} />
@@ -174,7 +184,7 @@ const CreateCommunityModal: React.FC<indexProps> = ({
                     <Flex>
                       <Icon as={HiLockClosed} color="gray.500" mr={2} />
                       <Text fontSize="10pt">Private</Text>
-                      <Text fontSize="10pt" mr={1}>
+                      <Text fontSize="10pt" mr={1} color="gray.500">
                         Only approved users can view and submit to this
                         community
                       </Text>
