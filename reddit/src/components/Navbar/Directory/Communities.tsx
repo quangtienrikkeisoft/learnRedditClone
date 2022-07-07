@@ -15,7 +15,11 @@ const Communities: React.FC<CommunitiesProps> = ({ menuOpen }) => {
 
   return (
     <>
-      <CreateCommunityModal isOpen={open} handleClose={() => setOpen(false)} />
+      <CreateCommunityModal
+        isOpen={open}
+        handleClose={() => setOpen(false)}
+        userId={user?.uid!}
+      />
       <MenuItem
         width="100%"
         fontSize="10pt"
