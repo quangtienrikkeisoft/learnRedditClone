@@ -1,12 +1,31 @@
 import { Flex, Icon, Input } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { BsLink45Deg } from "react-icons/bs";
 import { FaReddit } from "react-icons/fa";
 import { IoImageOutline } from "react-icons/io5";
+import { useSetRecoilState } from "recoil";
+import { authModalState } from "../../atoms/authModalAtom";
+import { auth } from "../../firebase/clientApp";
 
 type CreatePostLinkProps = {};
 
 const CreatePostLink: React.FC<CreatePostLinkProps> = () => {
+  const router = useRouter();
+  const [user] = useAuthState(auth);
+  const setAuthModalState = useSetRecoilState(authModalState);
+  const onClick = () => {
+    if (!user) {
+      setAuthModalState({
+        open: true,
+        view: "login",
+      });
+    }
+    const { communityId } = router.query;
+    console.log("this is community", communityId);
+    router.push(`/r/${communityId}/submit`);
+  };
   return (
     <Flex
       justifyContent="space-evenly"
@@ -42,7 +61,7 @@ const CreatePostLink: React.FC<CreatePostLinkProps> = () => {
         height="36px"
         borderRadius={4}
         mr={4}
-        onClick={() => {}}
+        onClick={onClick}
       />
       <Icon
         as={IoImageOutline}

@@ -4,6 +4,7 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import safeJsonStringify from "safe-json-stringify";
 import { Community } from "../../../atoms/communitiesAtom";
+import About from "../../../components/Community/About";
 import CommunityNotFound from "../../../components/Community/CommunityNotFound";
 import CreatePostLink from "../../../components/Community/CreatePostLink";
 import Header from "../../../components/Community/Header";
@@ -31,7 +32,10 @@ const CommunityPage: React.FC<CommunityPageProps> = ({ communityData }) => {
           <CreatePostLink />
           <Posts />
         </>
-        <>{/* right content */}</>
+        {/* right content */}
+        <>
+          <About communityData={communityData} />
+        </>
       </PageContent>
     </>
   );
