@@ -22,9 +22,10 @@ const CreatePostLink: React.FC<CreatePostLinkProps> = () => {
         view: "login",
       });
     }
-    const { communityId } = router.query;
-    console.log("this is community", communityId);
-    router.push(`/r/${communityId}/submit`);
+    const { community } = router.query;
+    console.log("this is community ID : ", community);
+    router.push(`/r/${community}/submit`);
+    console.log(router);
   };
   return (
     <Flex
