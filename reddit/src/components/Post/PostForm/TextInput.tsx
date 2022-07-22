@@ -55,7 +55,7 @@ const TextInput: React.FC<TextInputProps> = ({
         <Button
           height="34px"
           padding="0px 30px"
-          disabled={!textInputs.title}
+          disabled={!textInputs.title} // disable if there is none text input enter yet
           isLoading={loading}
           onClick={handleCreatePost}
         >

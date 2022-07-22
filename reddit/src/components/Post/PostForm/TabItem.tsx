@@ -28,7 +28,7 @@ const TabItem: React.FC<TabItemProps> = ({
       _hover={{
         bg: "gray.50",
       }}
-      onClick={() => {}}
+      onClick={() => setSelectedTab(item.title)}
     >
       <Flex align="center" height="20px" mr={2}>
         <Icon height="100%" fontSize={18} as={item.icon} />

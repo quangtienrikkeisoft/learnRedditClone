@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { BiPoll } from "react-icons/bi";
 import { BsLink45Deg, BsMic } from "react-icons/bs";
 import { IoDocumentText, IoImageOutline } from "react-icons/io5";
+import ImageUpload from "./ImageUpload";
 import TabItem from "./TabItem";
 import TextInput from "./TextInput";
 
@@ -53,6 +54,7 @@ const NewPostForm: React.FC = () =>
       body: "",
     });
     const [loading, setLoading] = useState(false);
+    const [selectedFile, setSelectedFile] = useState<string>();
 
     const onTextChange = ({
       target: { name, value },
@@ -61,6 +63,19 @@ const NewPostForm: React.FC = () =>
         ...prev,
         [name]: value,
       }));
+    };
+    const onSelectImage = (
+      event: React.ChangeEvent<HTMLInputElement>
+    ): void => {
+      const reader = new FileReader();
+      if (event.target.files?.[0]) {
+        reader.readAsDataURL(event.target.files[0]);
+      }
+      reader.onload = (readerEvent) => {
+        if (readerEvent.target?.result) {
+          //something here
+        }
+      };
     };
     const handleCreatePost = async () => {
       setLoading(true);
@@ -88,6 +103,7 @@ const NewPostForm: React.FC = () =>
               loading={loading}
             />
           )}
+          {selectedTab === "Images & Video" && <ImageUpload />}
         </Flex>
       </Flex>
     );
