@@ -1,9 +1,10 @@
 import { Flex, Icon } from "@chakra-ui/react";
 import { User } from "@firebase/auth";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { BiPoll } from "react-icons/bi";
 import { BsLink45Deg, BsMic } from "react-icons/bs";
 import { IoDocumentText, IoImageOutline } from "react-icons/io5";
+import ImageUpLoad from "./ImageUpLoad";
 import TabItem from "./TabItem";
 import TextInput from "./TextInput";
 
@@ -53,6 +54,9 @@ const NewPostForm: React.FC = () =>
       body: "",
     });
     const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
+    const [selectedFile, setSelectedFile] = useState<string>();
+    const selectFileRef = useRef<HTMLInputElement>(null);
 
     const onTextChange = ({
       target: { name, value },
@@ -67,6 +71,7 @@ const NewPostForm: React.FC = () =>
       const { title, body } = textInputs;
       setLoading(false);
     };
+    const onSelectImage = () => {};
     return (
       <Flex direction="column" bg="white" borderRadius={4} mt={2}>
         <Flex width="100%">
@@ -86,6 +91,15 @@ const NewPostForm: React.FC = () =>
               onChange={onTextChange}
               handleCreatePost={handleCreatePost}
               loading={loading}
+            />
+          )}
+          {selectedTab == "Images & Video" && (
+            <ImageUpLoad
+              selectedFile={selectedFile} // file url
+              setSelectedFile={setSelectedFile} // function
+              setSelectedTab={setSelectedTab} // set tab
+              selectFileRef={selectFileRef} //
+              onSelectImage={onSelectImage} //
             />
           )}
         </Flex>

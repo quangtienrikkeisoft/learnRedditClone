@@ -36,10 +36,12 @@ const TextInput: React.FC<TextInputProps> = ({
         borderRadius={4}
       />
       <Textarea
+        borderRadius={4}
         name="body"
         value={textInputs.body}
         onChange={onChange}
         fontSize="10pt"
+        height="150px"
         placeholder="Text (optional)"
         _placeholder={{
           color: "gray.500",
