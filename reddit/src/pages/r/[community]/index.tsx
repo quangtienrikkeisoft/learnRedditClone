@@ -2,8 +2,9 @@ import { doc, getDoc } from "firebase/firestore";
 import { GetServerSidePropsContext } from "next";
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { useSetRecoilState } from "recoil";
 import safeJsonStringify from "safe-json-stringify";
-import { Community } from "../../../atoms/communitiesAtom";
+import { Community, communityState } from "../../../atoms/communitiesAtom";
 import About from "../../../components/Community/About";
 import CommunityNotFound from "../../../components/Community/CommunityNotFound";
 import CreatePostLink from "../../../components/Community/CreatePostLink";
@@ -19,6 +20,11 @@ type CommunityPageProps = {
 const CommunityPage: React.FC<CommunityPageProps> = ({ communityData }) => {
   console.log("here is data", communityData);
   const [user, loadingUser] = useAuthState(auth);
+  const setCommunity = useSetRecoilState(communityState);
+  setCommunity((prev) => ({
+    ...prev,
+    currentCommunity: communityData,
+  }));
 
   if (!communityData) {
     return <CommunityNotFound />;
@@ -29,8 +35,12 @@ const CommunityPage: React.FC<CommunityPageProps> = ({ communityData }) => {
       <PageContent>
         {/* left content  */}
         <>
-          <CreatePostLink />
-          <Posts />
+          <CreatePostLink communityData={communityData} />
+          <Posts
+            communityData={communityData}
+            userId={user?.uid}
+            loadingUser={loadingUser}
+          />
         </>
         {/* right content */}
         <>

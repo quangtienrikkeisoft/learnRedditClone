@@ -15,10 +15,18 @@ export interface CommunitySnippet {
     imageURL?:string
 }
 export interface CommunityState {
-    mySnippets : CommunitySnippet[]
+    mySnippets : CommunitySnippet[];
+    currentCommunity: Community
+}
+export const defaultCommunity: Community = {
+    id: "",
+    creatorId: "" ,
+    numberOfMembers: 0,
+    privacyType: "public"
 }
 const defaultCommunityState: CommunityState = {
-    mySnippets : []
+    mySnippets : [],
+    currentCommunity:  defaultCommunity
 }
 export const communityState = atom<CommunityState>({
     key: "communtities",

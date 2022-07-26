@@ -7,9 +7,12 @@ import { FaReddit } from "react-icons/fa";
 import { IoImageOutline } from "react-icons/io5";
 import { useSetRecoilState } from "recoil";
 import { authModalState } from "../../atoms/authModalAtom";
+import { Community } from "../../atoms/communitiesAtom";
 import { auth } from "../../firebase/clientApp";
 
-type CreatePostLinkProps = {};
+type CreatePostLinkProps = {
+  communityData: Community;
+};
 
 const CreatePostLink: React.FC<CreatePostLinkProps> = () => {
   const router = useRouter();
