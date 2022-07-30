@@ -12,6 +12,11 @@ const usePost = (communityData?: Community) => {
     const [error , setError] = useState("");
     const router = useRouter()
     const [postStateValue, setPostStateValue] = useRecoilState(PostState)
+    // on selected post
+    // onvote
+    // on deletepost
+    // get communitypostvotes
+    //
 
     return {
         postStateValue, setPostStateValue
